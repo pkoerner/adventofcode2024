@@ -23,8 +23,6 @@
   (for [n (range (count l))]
     (concat (take n l) (drop (inc n) l))))
 
-(one-removals [1 2 3 4])
-
 (println "Part 2: "
          (count (filter (fn [report] (or (report-safe? report)
                                          (some report-safe? (one-removals report)))) input)))
